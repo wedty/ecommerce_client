@@ -7,7 +7,7 @@ import {
     useStripe,
     useElements,
   } from "@stripe/react-stripe-js";
-  import {axios} from "../basic/axiosInstance";
+  import {axiosInstance} from "../basic/axiosInstance";
 import { Typography } from '@material-ui/core';
 import {useAlert} from "react-alert";
 import MetaData from "../basic/Metadata"
@@ -65,7 +65,7 @@ const navigate =useNavigate();
                     "Content-Type":"application/json",
                 },
             }
-            const {data} = await axios.post("/api/v1/payment/process",
+            const {data} = await axiosInstance.post("/api/v1/payment/process",
             paymentData,config);
 
             const client_secret = data.client_secret;

@@ -23,7 +23,7 @@ import {Payment} from './components/Cart/Payment'
 
 import {Cart} from "./components/Cart/Cart";
 import { ConfirmOrder } from './components/Cart/ConfirmOrder';
-import {axios} from "./components/basic/axiosInstance";
+import {axiosInstance} from "./components/basic/axiosInstance";
 import {loadStripe} from '@stripe/stripe-js';
 import {Elements} from '@stripe/react-stripe-js';
 import { OrderSuccess } from './components/Cart/OrderSuccess';
@@ -45,14 +45,14 @@ import {About} from './components/basic/About/About'
 
 const App = () => {
 
-  // axios.defaults.withCredentials = true;
+  // axiosInstance.defaults.withCredentials = true;
 
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
   const [stripeApiKey, setStripeApiKey] = useState("");
 
   async function getStripeApiKey() {
-    const { data } = await axios.get("/api/v1/stripeapikey");
+    const { data } = await axiosInstance.get("/api/v1/stripeapikey");
 
     setStripeApiKey(data.stripeApiKey);
   }
