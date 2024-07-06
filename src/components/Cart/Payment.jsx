@@ -7,7 +7,7 @@ import {
     useStripe,
     useElements,
   } from "@stripe/react-stripe-js";
-  import axios from "axios";
+  import {axios} from "../basic/axiosInstance";
 import { Typography } from '@material-ui/core';
 import {useAlert} from "react-alert";
 import MetaData from "../basic/Metadata"

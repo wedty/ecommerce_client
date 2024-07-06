@@ -37,7 +37,7 @@ import {
     CLEAR_ERRORS,
   } from "../Constants/userConstants.js";
 
-  import axios from "axios";
+  import {axios} from "../components/basic/axiosInstance.jsx";
   
   // Login
   export const login = (email, password) => async (dispatch) => {

@@ -23,7 +23,7 @@ import {Payment} from './components/Cart/Payment'
 
 import {Cart} from "./components/Cart/Cart";
 import { ConfirmOrder } from './components/Cart/ConfirmOrder';
-import axios from "axios";
+import {axios} from "./components/basic/axiosInstance";
 import {loadStripe} from '@stripe/stripe-js';
 import {Elements} from '@stripe/react-stripe-js';
 import { OrderSuccess } from './components/Cart/OrderSuccess';
