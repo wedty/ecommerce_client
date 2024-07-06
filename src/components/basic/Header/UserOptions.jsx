@@ -89,7 +89,7 @@ function logoutUser(){
        icon={
         <img 
             className='speedDialIcon'
-            src={user.avatar.url ? user.avatar.url :"/images/profile_pic.png"} 
+            src={user!=null && user.avatar.url ? user.avatar.url :"/images/profile_pic.png"} 
 
             alt="p"
         />
